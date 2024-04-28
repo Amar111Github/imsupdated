@@ -20,7 +20,7 @@ const TaxForm = ({ setFormToggle,allTax, editData, setEditData}) => {
         try {
      
           
-            const response = await axios.patch(`http://localhost:8000/tax/update_tax/${editData._id}`, data);
+            const response = await axios.patch(`/tax/update_tax/${editData._id}`, data);
             console.log(response);
             setFormToggle(false);
             setData({
@@ -40,7 +40,7 @@ const TaxForm = ({ setFormToggle,allTax, editData, setEditData}) => {
         try {
         
        
-            const response = await axios.post("http://localhost:8000/tax/create_tax", data);
+            const response = await axios.post("/tax/create_tax", data);
             console.log(response);
             
             setFormToggle(false);

@@ -33,7 +33,7 @@ const TotalUnits = () => {
       }
     const allUnits = async () => {
         try {
-            const response = await axios.get("http://localhost:8000/noOfUnit/noOfUnit");
+            const response = await axios.get("/noOfUnit/noOfUnit");
            
             const transformedObject = getTotalQuantities(response.data.data);
             setData(transformedObject);

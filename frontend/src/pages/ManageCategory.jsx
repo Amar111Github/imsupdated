@@ -21,7 +21,7 @@ const ManageCategory = () => {
     const [editData, setEditData] = useState("");
     const allCategory = async () => {
         try {
-            const response = await axios.get("http://localhost:8000/category/findall_category");
+            const response = await axios.get("/category/findall_category");
             setData(response.data.data);
             setViewData(response.data.data)
         } catch (error) {
@@ -39,7 +39,7 @@ const ManageCategory = () => {
     }
 
     const deleteHandler = async (id) => {
-        await axios.delete(`http://localhost:8000/category/${id}`).then((res) => {
+        await axios.delete(`/category/${id}`).then((res) => {
             console.log(res.data);
             alert("deleted")
             allCategory();

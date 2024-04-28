@@ -30,7 +30,7 @@ const MainPage = () => {
     }
     const allInvoice = async () => {
       try {
-          const response = await axios.post("http://localhost:8000/invoice/find_product_list", date);
+          const response = await axios.post("/invoice/find_product_list", date);
           console.log(response.data.data)
           let xaxis = [];
           let yaxis = [];
@@ -49,7 +49,7 @@ const MainPage = () => {
   const allPurchase = async () => {
     try {
       console.log(date);
-        const response = await axios.post("http://localhost:8000/product_details/find_product_list", date);
+        const response = await axios.post("/product_details/find_product_list", date);
         console.log(response.data.data)
         let xaxis = [];
         let yaxis = [];
@@ -66,7 +66,7 @@ const MainPage = () => {
 }
   const allDashboard = async () => {
     try {
-        const response = await axios.get("http://localhost:8000/mainpage");
+        const response = await axios.get("/mainpage");
         console.log(response.data);
         setDataDashboard(response.data)
      
@@ -76,7 +76,7 @@ const MainPage = () => {
 }
 const lastTranscation = async () => {
   try {
-      const response = await axios.get("http://localhost:8000/lastInvoices");
+      const response = await axios.get("/lastInvoices");
       console.log(response.data.sales);
       setLastTranscations(response.data.sales)
    

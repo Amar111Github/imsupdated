@@ -49,7 +49,7 @@ const ForgotPassword = () => {
 
   const sendOtp = async () => {
     try {
-      const response = await axios.post("http://localhost:8000/user/email_verify", data);
+      const response = await axios.post("/user/email_verify", data);
       console.log(response)
       if (response.data.message === "ok") {
         alert("Otp Sent");
@@ -77,7 +77,7 @@ const ForgotPassword = () => {
   const handleOtpSubmit =async (e) => {
     e.preventDefault();
     try{
-        const response = await axios.post("http://localhost:8000/user/verify_otp", data);
+        const response = await axios.post("/user/verify_otp", data);
         console.log(response)
     }catch(error){
         console.log(error.response.data.message)

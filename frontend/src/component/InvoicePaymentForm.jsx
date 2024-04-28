@@ -17,7 +17,7 @@ const InvoicePaymentForm = ({setViewPayment,allPurchase,viewPurchase}) => {
             try {
            
               
-                const response = await axios.post("http://localhost:8000/invoice/addpayment", data);
+                const response = await axios.post("/invoice/addpayment", data);
                 console.log(response);
                 
                 setViewPayment(false);

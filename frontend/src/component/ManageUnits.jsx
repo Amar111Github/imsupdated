@@ -20,7 +20,7 @@ const ManageUnits = () => {
 
     const allUnits = async () => {
         try {
-            const response = await axios.get("http://localhost:8000/noOfUnit/noOfUnit");
+            const response = await axios.get("/noOfUnit/noOfUnit");
             console.log(response.data.data)
             setData(response.data.data);
             setViewData(response.data.data);

@@ -21,7 +21,7 @@ const ApprovalInvoice = () => {
     const doc = new jsPDF({ orientation: 'landscape' });
     const allPurchase = async () => {
         try {
-            const response = await axios.get("http://localhost:8000/invoice/allInvoices");
+            const response = await axios.get("/invoice/allInvoices");
             
             if(response.data.result.length>0){
                 setData(response.data.result[0].arr.filter((val)=>{
@@ -55,7 +55,7 @@ const ApprovalInvoice = () => {
    
     const allUnits = async () => {
         try {
-            const response = await axios.get("http://localhost:8000/noOfUnit/noOfUnit");
+            const response = await axios.get("/noOfUnit/noOfUnit");
             
       
             const transformedObject = getTotalQuantities(response.data.data);
@@ -76,7 +76,7 @@ console.log(data)
         item.status = "Rejected";
         console.log(item)
         try{
-            await axios.patch(`http://localhost:8000/invoice/updateProductstatus/${item._id}`, item);
+            await axios.patch(`/invoice/updateProductstatus/${item._id}`, item);
             alert("Request is Rejected")
             allPurchase();
         }catch(error){
@@ -94,7 +94,7 @@ console.log(data)
                 console.log(+units[key]- +item.noOfUnit)
                 if(units[key]-item.noOfUnit>=0){
                      try{
-            await axios.patch(`http://localhost:8000/invoice/updateProductstatus/${item.id}`, item);
+            await axios.patch(`/invoice/updateProductstatus/${item.id}`, item);
             alert("Request is Approved")
             allPurchase();
             allUnits();

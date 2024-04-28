@@ -53,7 +53,7 @@ const TotalProfit = () => {
 
     const allUnits = async () => {
         try {
-            const response = await axios.get("http://localhost:8000/noOfUnit/noOfUnit");
+            const response = await axios.get("/noOfUnit/noOfUnit");
             console.log(response)
             const transformedObject = getTotalPrice(response.data.data);
             console.log(transformedObject)
@@ -128,7 +128,7 @@ const TotalProfit = () => {
     };
 const searchProducts = async ()=>{
     try {
-        const response = await axios.post("http://localhost:8000/noOfUnit/profit", date);
+        const response = await axios.post("/noOfUnit/profit", date);
       console.log(response)
         const transformedObject = getTotalPrice(response.data.data);
    
@@ -174,7 +174,7 @@ const weeklyHandler = async ()=>{
      let status= "Approved";
         let obj = {startDate, endDate, status}
         console.log(obj)
-        const response = await axios.post("http://localhost:8000/noOfUnit/profit", obj);
+        const response = await axios.post("/noOfUnit/profit", obj);
 
         const transformedObject = getTotalPrice(response.data.data);
    
@@ -197,7 +197,7 @@ const monthlyHandler = async ()=>{
    const endDate = today.toISOString().slice(0, 10);
         let obj = {startDate, endDate, status}
         console.log(obj)
-        const response = await axios.post("http://localhost:8000/noOfUnit/profit", obj);
+        const response = await axios.post("/noOfUnit/profit", obj);
         const transformedObject = getTotalPrice(response.data.data);
         setData(transformedObject);
         setViewData(transformedObject);
@@ -217,7 +217,7 @@ const yearlyHandler = async ()=>{
         const endDate = today.toISOString().slice(0, 10);
         let obj = {startDate, endDate, status}
        console.log(obj)
-        const response = await axios.post("http://localhost:8000/noOfUnit/profit", obj);
+        const response = await axios.post("/noOfUnit/profit", obj);
 
         const transformedObject = getTotalPrice(response.data.data);
    

@@ -60,7 +60,7 @@ let purchaseNo = `KASP-${+rray+1}`;
   const [sale, setSale] =useState(null)
   const allProduct = async () => {
     try {
-        const response = await axios.post("http://localhost:8000/product/all_product");
+        const response = await axios.post("/product/all_product");
         setProductDetails(response.data.result)
     } catch (error) {
         console.log(error);
@@ -69,7 +69,7 @@ let purchaseNo = `KASP-${+rray+1}`;
   const purchaseFormHandler = async (arr) => {
     try {
     
-      const response = await axios.post("http://localhost:8000/invoice/invoices", [arr]);
+      const response = await axios.post("/invoice/invoices", [arr]);
       alert('Purchase Request done Successfully');
       setFormToggle(false);
       allPurchase();
@@ -108,7 +108,7 @@ let purchaseNo = `KASP-${+rray+1}`;
   const allPoductQuantity = async (e) => {
     console.log("hello")
     try {
-        const response = await axios.get("http://localhost:8000/noOfUnit/noOfUnit");
+        const response = await axios.get("/noOfUnit/noOfUnit");
         console.log(response.data.data)
       if( Object.keys(response.data.data).length){
         let requiredProduct = Object.entries(response.data.data).filter(([productName, value])=>{

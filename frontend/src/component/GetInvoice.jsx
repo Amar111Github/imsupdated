@@ -29,7 +29,7 @@ const GetInvoice = () => {
     const [viewPurchase, setViewPurchase] = useState(null);
     const allPurchase = async () => {
         try {
-            const response = await axios.post("http://localhost:8000/invoice/find_product_list", data);
+            const response = await axios.post("/invoice/find_product_list", data);
             console.log(response.data.data)
             setReceivedData(response.data.data)
             setCopyData(response.data.data)

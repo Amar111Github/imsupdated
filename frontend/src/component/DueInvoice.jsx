@@ -26,7 +26,7 @@ const DueInvoice = () => {
     const allPurchase = async () => {
         try {
             console.log("hello")
-            const response = await axios.get("http://localhost:8000/invoice/allInvoices");
+            const response = await axios.get("/invoice/allInvoices");
             if(response.data.result.length>0){
                 let filterData =   response.data.result[0].arr.filter((val,i)=>{
                     return (val.dueAmount>0) && val.paidStatus!=="paid"
@@ -52,7 +52,7 @@ const DueInvoice = () => {
 const editHandler =async (item) => {
     console.log(item.id)
     try {
-        const response = await axios.patch(`http://localhost:8000/invoice/updateProductPaidstatus/${item.id}`, item);
+        const response = await axios.patch(`/invoice/updateProductPaidstatus/${item.id}`, item);
        console.log(response)
        allPurchase();
 

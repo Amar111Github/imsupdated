@@ -21,7 +21,7 @@ const ProductForm = ({setFormToggle,allProduct, editData, setEditData}) => {
     });
     const allTax = async () => {
       try {
-        const response = await axios.get("http://localhost:8000/tax/find_tax");
+        const response = await axios.get("/tax/find_tax");
         setTax(response.data.product);
       } catch (error) {
         console.log(error);
@@ -30,7 +30,7 @@ const ProductForm = ({setFormToggle,allProduct, editData, setEditData}) => {
     
     const hsnDetailsHandler = async()=>{
       try{
-        const response = await axios.get("http://localhost:8000/hsn/findall_hsn", data);
+        const response = await axios.get("/hsn/findall_hsn", data);
      setHsnDetails(response.data.data)
     
       }catch(error){
@@ -47,7 +47,7 @@ const ProductForm = ({setFormToggle,allProduct, editData, setEditData}) => {
   const supplierDetailsHandler = async()=>{
    
     try{
-      const response = await axios.get("http://localhost:8000/product/category_Supplire");
+      const response = await axios.get("/product/category_Supplire");
       setCategoryDetails(response.data.category);
       setSupplierDetails(response.data.suppliers);
     }catch(error){
@@ -66,7 +66,7 @@ console.log(editData, categoryDetails)
         if(editData){
             try {
          
-                const response = await axios.patch(`http://localhost:8000/product/update_product/${editData._id}`, data);
+                const response = await axios.patch(`/product/update_product/${editData._id}`, data);
                 console.log(response);
                
                 setData({
@@ -90,7 +90,7 @@ console.log(editData, categoryDetails)
             try {
             
               
-                const response = await axios.post("http://localhost:8000/product/add", data);
+                const response = await axios.post("/product/add", data);
                 console.log(response);
                 
                 setFormToggle(false);

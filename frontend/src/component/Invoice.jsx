@@ -69,7 +69,7 @@ const Invoice = ({viewPurchase, setViewToggle}) => {
   };
   const deleteHandler = async (id) => {
     console.log(id)
-    await axios.delete(`http://localhost:8000/product_details/remove_product_details/${id}`).then((res) => {
+    await axios.delete(`/product_details/remove_product_details/${id}`).then((res) => {
         console.log(res.data);
         // purchaseNoHandler();
 

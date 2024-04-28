@@ -21,7 +21,7 @@ const ManageProduct = () => {
     const doc = new jsPDF()
     const allProduct = async () => {
         try {
-            const response = await axios.post("http://localhost:8000/product/all_product");
+            const response = await axios.post("/product/all_product");
             console.log(response.data.result)
             setData(response.data.result);
             setViewData(response.data.result)
@@ -69,7 +69,7 @@ const ManageProduct = () => {
     }
 console.log(data)
     const deleteHandler = async (id) => {
-        await axios.delete(`http://localhost:8000/product/delete_product/${id}`).then((res) => {
+        await axios.delete(`/product/delete_product/${id}`).then((res) => {
             console.log(res.data);
             alert("deleted")
             allProduct();

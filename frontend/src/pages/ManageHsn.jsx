@@ -21,7 +21,7 @@ const ManageHsn = () => {
     const [editData, setEditData] = useState("");
     const allHsn = async () => {
         try {
-            const response = await axios.get("http://localhost:8000/hsn/findall_hsn");
+            const response = await axios.get("/hsn/findall_hsn");
             setData(response.data.data);
             setViewData(response.data.data)
         } catch (error) {
@@ -39,7 +39,7 @@ const ManageHsn = () => {
     }
 
     const deleteHandler = async (id) => {
-        await axios.delete(`http://localhost:8000/hsn/${id}`).then((res) => {
+        await axios.delete(`/hsn/${id}`).then((res) => {
             console.log(res.data);
             alert("deleted")
             allHsn();

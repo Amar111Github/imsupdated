@@ -23,7 +23,7 @@ const Hsn = ({ setFormToggle,allHsn, editData, setEditData}) => {
             try {
          
               
-                const response = await axios.patch(`http://localhost:8000/hsn/update_hsn/${editData._id}`, data);
+                const response = await axios.patch(`/hsn/update_hsn/${editData._id}`, data);
                 console.log(response);
                 setFormToggle(false);
                 setData({
@@ -42,7 +42,7 @@ const Hsn = ({ setFormToggle,allHsn, editData, setEditData}) => {
             try {
             
            
-                const response = await axios.post("http://localhost:8000/hsn/create_hsn", data);
+                const response = await axios.post("/hsn/create_hsn", data);
                 console.log(response);
                 
                 setFormToggle(false);

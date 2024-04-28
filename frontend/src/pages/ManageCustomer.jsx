@@ -23,7 +23,7 @@ const ManageCustomer = () => {
 
     const allClient = async () => {
         try {
-            const response = await axios.get("http://localhost:8000/client/allCustomer");
+            const response = await axios.get("/client/allCustomer");
             setViewData(response.data.result)
             setData(response.data.result);
         } catch (error) {
@@ -43,7 +43,7 @@ const ManageCustomer = () => {
     }
 
     const deleteHandler = async (id) => {
-        await axios.delete(`http://localhost:8000/client/delete_Customer/${id}`).then((res) => {
+        await axios.delete(`/client/delete_Customer/${id}`).then((res) => {
             console.log(res.data);
             alert("deleted")
             allClient();

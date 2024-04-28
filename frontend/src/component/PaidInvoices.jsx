@@ -24,7 +24,7 @@ const PaidInvoices = () => {
     const [viewPurchase, setViewPurchase] = useState(null);
     const allPurchase = async () => {
         try {
-            const response = await axios.get("http://localhost:8000/invoice/allInvoices");
+            const response = await axios.get("/invoice/allInvoices");
             if(response.data.result.length>0){
           let filterData =   response.data.result[0].arr.filter((val,i)=>{
                 return val.paidStatus !== "partiallyPaid" && val.paidStatus!=="unpaid" 
@@ -44,7 +44,7 @@ const PaidInvoices = () => {
     
 console.log(data)
     const deleteHandler = async (id) => {
-        await axios.delete(`http://localhost:8000/invoice/remove_invoice_details/${id}`).then((res) => {
+        await axios.delete(`/invoice/remove_invoice_details/${id}`).then((res) => {
             console.log(res.data);
             alert("deleted")
             allPurchase();

@@ -36,7 +36,7 @@ const SuplierForm = ({ data1, setFormToggle,allSupplier, editData, setEditData})
                   alert("mail already exist");
                   return;
                 }
-                const response = await axios.patch(`http://localhost:8000/supplier/update_supplire/${editData._id}`, data);
+                const response = await axios.patch(`/supplier/update_supplire/${editData._id}`, data);
                 console.log(response);
                 setFormToggle(false);
                 setData({
@@ -65,7 +65,7 @@ const SuplierForm = ({ data1, setFormToggle,allSupplier, editData, setEditData})
                       alert("mail already exist");
                       return;
                     }
-                const response = await axios.post("http://localhost:8000/supplier/create_supplier", data);
+                const response = await axios.post("/supplier/create_supplier", data);
                 console.log(response);
                 
                 setFormToggle(false);

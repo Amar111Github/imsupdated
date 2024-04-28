@@ -72,7 +72,7 @@ const [product, setProduct] = useState("");
 const [paymentMode, setPaymentMode] = useState("")
 const allProduct = async () => {
   try {
-      const response = await axios.post("http://localhost:8000/product/all_product");
+      const response = await axios.post("/product/all_product");
       console.log(response.data.result)
      
       setProductDetails(response.data.result)
@@ -88,7 +88,7 @@ const purchaseFormHandler=async (arr)=>{
     
     console.log(arr)
 
-        const response = await axios.post("http://localhost:8000/product_details/product", [arr]);
+        const response = await axios.post("/product_details/product", [arr]);
         console.log(response);
         alert("purchase Request done Successfully");
         setFormToggle(false);
@@ -107,7 +107,7 @@ const purchaseFormHandler=async (arr)=>{
 const supplierDetailsHandler = async()=>{
    
   try{
-    const response = await   axios.get("http://localhost:8000/product/category_Supplire");
+    const response = await   axios.get("/product/category_Supplire");
 
 
     setSupplierDetails(response.data.suppliers);
@@ -121,7 +121,7 @@ const supplierDetailsHandler = async()=>{
 
 const productDetailsHandler = async ()=>{
   try{
-    const response = await axios.post("http://localhost:8000/product_details/productsDetails", data);
+    const response = await axios.post("/product_details/productsDetails", data);
 
 
   }catch(error){
@@ -156,7 +156,7 @@ const totalPriceCalculator = ()=>{
 
 const allSupplier = async () => {
   try {
-      const response = await axios.get("http://localhost:8000/supplier/find_supplire");
+      const response = await axios.get("/supplier/find_supplire");
       console.log(response.data.product)
       setSupplierData(response.data.product)
    
