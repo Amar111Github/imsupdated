@@ -1,0 +1,15 @@
+.approved{
+   
+    color: green !important;
+    margin-right: 6px !important;
+}
+.rejected{
+
+    color: red;
+    
+}
+.purchasde-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

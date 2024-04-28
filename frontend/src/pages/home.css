@@ -1,0 +1,46 @@
+.dashboard{
+    max-width: 1920px;
+    margin: 70px auto 0;
+    display: flex;
+    
+  
+  }
+  .sideboard{
+    width: 18%;
+    background-color: white;
+  box-shadow: 2px 2px 8px 0 lightgray;
+  border-radius: 8px;
+    height: calc(100vh - 70px);
+    
+  }
+  .pages{
+   width: 82%;
+  }
+  .active{
+    background-color: #0F6060;
+    border-radius: 8px;
+    color: white !important;
+  }
+  .navlinks{
+    display: flex;
+    height: 50px;
+    gap: 8px;
+    align-items: center;
+    padding: 0 10px;
+    color: #53545c;
+    /* border-bottom: 1px solid #53545C; */
+    text-decoration: none;
+  }
+  .navlinks p{
+   font-size: 16px;
+   text-decoration: none;
+   font-family: poppins;
+   font-weight: 500;
+  }
+  .sideIcons{
+    font-size: 25px;
+  
+  }
+  .navlinks:hover{
+    color: #0F6060;
+  }

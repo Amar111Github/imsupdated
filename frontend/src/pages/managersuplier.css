@@ -1,0 +1,195 @@
+.purchase{
+  width: 82%;
+  background-color: #fafafa ;
+  margin: 10px 10px 0;
+  height: calc(100vh - 80px);
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.purchase-button{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+ 
+}
+.purchase-button ul{
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px 0 #0F6060;
+}
+.purchase-button ul li{
+  color: #53545c;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-family: poppins;
+  background-color: #0f606020;
+}
+.download-container{
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #0f606020;
+}
+.purchase-button ul li a{
+  text-decoration: none;
+  color: #53545c;
+}
+.purchase-button ul svg{
+  font-size: 20px;
+  color: #53545c;
+}
+.input-container{
+  height: 32px;
+  width: 235px;
+}
+
+.input-container input{
+  height: 100%;
+  width: 100%;
+  border: 1px solid #53545c33;
+  border-radius: 5px;
+  padding: 0 10px;
+  outline: none;
+}
+.input-container input:focus{
+border: 1px solid #0F6060;
+}
+.subactive{
+  background-color: #0F6060 !important;
+  color: white !important;
+}
+.subactive a{
+  color: white !important;
+
+}
+
+.purchase-table {
+  margin-top: 15px;
+}
+
+.purchase-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.purchase-table th,
+.purchase-table td {
+  border-bottom: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+  font-family: poppins;
+  font-size: 13px;
+}
+.purchase-table td svg {
+
+  font-size: 20px;
+}
+
+.purchase-table th {
+  background-color: #0F6060 !important;
+  color: white !important;
+  font-family: poppins;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.purchase-table tbody tr:nth-child(even) {
+  background-color: #0f60601c;
+}
+
+.purchase-table tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+.managersuplier-pagination{
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  justify-content: center;
+}
+
+.managersuplier-pagination  li{
+ list-style: none;
+  margin: 10px;
+  display: flex;
+  font-weight: 600;
+  align-items: center;
+  color: #0F6060;
+  font-family: poppins;
+  font-size: 25px;
+}
+.managersuplier-pagination svg{
+  color: #0F6060;
+  font-size: 30px
+}
+.pending{
+  color: #ffaa00 !important;
+}
+.approve{
+  color: green !important;
+}
+.reject{
+  color: red !important;
+}
+.visible{
+  color: #0353a4;
+  cursor: pointer;
+}
+.purchase-table{
+  text-align: right;
+}
+.newPurchase{
+  padding: 8px 12px;
+  margin-right: 5px;
+  background-color: #0F6060;
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-family: poppins;
+  cursor: pointer;
+}
+.supplier{
+  font-size: 25px !important;
+  margin-left: 5px;
+  color: #0F6060 ;
+}
+.profile-image-container {
+  width: 60px;
+ 
+}
+.profile-image{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; 
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+ }
+  
+  .manage-customer-table .profile-image img {
+   /* width: 100%;   */
+   height: 100%;
+    object-fit: cover;
+  }
+  .table-purchase tbody td{
+    cursor: pointer;
+  }
+ .action .reject{
+  margin-right: 10px;
+ }
+ .action .dueInvoice-edit{
+  margin-right: 10px;
+  cursor: pointer;
+ }

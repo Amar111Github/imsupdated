@@ -1,0 +1,87 @@
+.profile{
+    width: 250px;
+    background-color: white;
+    position: absolute;
+    top: 70px;
+    z-index: 1;
+    right: 50px;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 2px 2px 5px 0 rgb(116, 116, 116);
+    transition: 0.5s;
+   
+}
+.profile-show{
+    width: 250px;
+    background-color: white;
+    position: absolute;
+    top: -350px;
+    transition: 0.5s;
+    right: 50px;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 2px 2px 5px 0 rgb(116, 116, 116);
+}
+.profile-inner-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    /* background-color: aqua; */
+}
+.editer{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 14px;
+    color: blueviolet;
+}
+.profile-image{
+    height: 80px;
+    width: 80px;
+    background-color: white;
+border-radius: 50%;
+overflow: hidden;
+}
+.profile-image img{
+    width: 100%;
+    object-fit: cover;
+}
+.profile-details-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 15px;
+    gap: 6px;
+    width: 100%;
+}
+.profile-details{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+}
+.profile-details h6{
+    font-size: 14px;
+    text-align: left;
+    font-weight: 500;
+}
+.profile-details p{
+    font-size: 14px;
+    color: #03022980;
+}
+.profile-details-logout{
+    align-self: center;
+}
+.profile-details-logout a{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: red;
+
+}
+.profile-details-logout a svg{
+    font-size: 25px;
+    color: red;
+}

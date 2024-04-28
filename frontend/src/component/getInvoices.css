@@ -1,0 +1,191 @@
+/* getInvoice.css */
+.purchase form{
+  margin-top: 15px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: flex-end;
+  
+}
+
+
+.purchase form input[type='date'] {
+  height: 28px;
+  width: 125px;
+  border: 1px solid #0F6060;
+  border-radius: 5px;
+  padding: 0 10px;
+  color: #0F6060;
+  outline: none;
+  display: flex;
+  align-items: center;
+
+}
+
+.purchase form button{
+  padding: 5px 10px;
+  margin-right: 5px;
+  background-color: #0F6060;
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-family: poppins;
+}
+.getInvoice {
+    padding: 20px 8px;
+    width: 100%;
+  }
+  
+  .getInvoice form {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .getInvoice input {
+    width: 150px;
+    height: 30px;
+    padding: 0 10px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+  }
+  
+  .getInvoice button {
+    padding: 10px 25px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  /* getInvoices.css */
+
+.getInvoice {
+  padding: 20px 8px;
+  width: 100%;
+}
+
+.getInvoice-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.getInvoice-heading h5 {
+  font-size: 24px;
+  color: #333;
+}
+
+.getInvoice-heading input {
+  width: 250px;
+  height: 30px;
+  padding: 0 10px;
+  border: 1px solid lightgray;
+  outline: #007bff;
+  border-radius: 5px;
+}
+
+.getInvoice-heading input:focus {
+  border: 1px solid #007bff;
+}
+
+.getInvoice-heading button {
+  padding: 10px 25px;
+  background-color: #007bff;
+  color: #fff;
+  width: fit-content;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.getInvoice table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.getInvoice th,
+.getInvoice td {
+  padding: 10px;
+  text-align: center;
+  border-left: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+}
+
+.getInvoice th:first-child,
+.getInvoice td:first-child {
+  border-left: none;
+}
+
+.getInvoice tbody tr:nth-child(2n),
+.getInvoice-pagination ul li:nth-child(2) {
+  background-color: #45be8a49;
+}
+
+.getInvoice tbody tr:nth-child(2n-1),
+.getInvoice-pagination ul li:first-child,
+.getInvoice-pagination ul li:last-child {
+  background-color: #1ac27c75;
+}
+
+.getInvoice th {
+  background-color: #347AB8;
+  color: white;
+}
+
+.getInvoice-table td svg {
+  font-size: 25px;
+  margin-left: 10px;
+}
+
+.getInvoice-table td svg:first-child {
+  color: #007bff;
+}
+
+.getInvoice-table td svg:last-child {
+  color: rgba(255, 0, 0, 0.641);
+}
+
+.getInvoice-pagination {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+.getInvoice-pagination ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.getInvoice-pagination ul li {
+  border: 1px solid green;
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+}
+
+.purchase-form-inputs_container .custom-dropdown {
+  position: relative;
+}
+
+.purchase-form-inputs_container .custom-dropdown select {
+  width: 100%;
+  padding: 5px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+}
+
+.dueInvoice-edit {
+  color: #007bff !important;
+}
+
+.getInvoice-heading svg{
+  font-size: 30px;
+}

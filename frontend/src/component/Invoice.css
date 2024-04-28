@@ -1,0 +1,262 @@
+/* Invoice.css */
+.download-invoice{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: poppins;
+
+    width: 100%;
+    /* margin-top: 245px; */
+    padding: 5px 40px;
+  }
+  .download-invoice svg{
+    font-size: 30px;
+    color: #126262;
+  }
+  .closing{
+    color: red !important;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .invoice-container{
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+
+    z-index: 100011;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    /* height: 100vh; */
+    align-items: center;
+    justify-content: center;
+  }
+  .invoice {
+     width: 1280px;
+     /* height: 100%; */
+      margin: 0 auto;
+      /* overflow-y: scroll; */
+      padding: 15px 40px;
+      border: 1px solid #ddd;
+    }
+    .invoice table thead tr {
+      background-color: #126262;
+      color: white;
+    }
+    
+   .invoice-first-div{
+    display: flex;
+  
+    justify-content: space-between;
+   }
+   .logo-container p{
+    font-size: 25px;
+    font-weight: 600;
+   margin-top: 5px;
+   font-family: poppins;
+
+   }
+  .invoice-logo{
+    width: 150px;
+   
+    overflow: hidden;
+    /* background-color: red; */
+  }
+  .invoice-logo img{
+    width: 100%;
+    object-fit: cover;
+  }
+  .date-container h3{
+    font-size: 55px;
+    color: #126262;
+    line-height: 43px;
+    font-family: poppins;
+
+  }
+  .date-container p{
+    font-weight: 500;
+    font-size: 18px;
+    margin-top: 10px;
+    font-family: poppins;
+
+  }
+  .date-container p span{
+    font-weight: 600;
+    font-family: poppins;
+
+  }
+  .invoice-address{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+  }
+  .invoice-address-left{
+    width: 283px;
+  }
+  .invoice-address-left p , .invoice-address-right p{
+    font-size: 16px;
+    font-family: poppins;
+
+    margin: 3px 0;
+  }
+  .invoice-address-left p:last-child,  .invoice-address-right p:last-child{
+  
+    margin-top: 10px;
+    font-family: poppins;
+
+  }
+  .invoice-address-right p:last-child{
+  
+    margin-top: 6px;
+  }
+  .invoice-address-left span ,.invoice-address-right span{
+    font-weight: 600;
+  }
+  
+  .invoice-address-right{
+    width: 277px;
+  }
+  table{
+    width: 100%;
+    margin: 50px 0 0;
+    border-collapse: collapse;
+    text-align: left;
+  }
+  /* thead tr{
+    height: 55px;
+    background-color: #126262;
+    color: white;
+  } */
+  thead th, tbody td{
+    padding: 10px 10px;
+    font-family: poppins;
+
+  }
+  tbody td{
+    border-bottom: 1px solid black;
+    font-family: poppins;
+
+  }
+  
+  .totalAmount-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+  .cont{
+    justify-content: flex-end;
+  }
+  .totalAmount{
+    width: 290px;
+  }
+  .totalAmount p{
+    margin: 10px 0;
+    padding: 0 15px;
+    font-family: poppins;
+
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    
+  }
+  .totalAmount p:last-child{
+    height: 40px;
+    font-family: poppins;
+
+    color: white;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    background-color: #126262;
+  }
+  .thankyouNote-Container, .TermsAndCondition-Container{
+    margin-top: 50px;
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+    font-family: poppins;
+
+  }
+  .TermsAndCondition-Container{
+    margin-top: 35px;
+    font-family: poppins;
+
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+    text-align: center;
+  }
+  .thankyouNote-Container p, .TermsAndCondition-Container h4{
+    font-size: 32px;
+    font-family: poppins;
+
+    font-weight: 600;
+    color: #126262;
+  }
+  .TermsAndCondition-Container h4{
+    font-size: 25px;
+    font-family: poppins;
+
+  }
+  .TermsAndCondition-Container p{
+    margin-top: 4px;
+    font-family: poppins;
+
+    font-size: 12px;
+  }
+  .invoiceCopy{
+    border: 1px solid lightgray;
+    padding: 2px 3px;
+    font-family: poppins;
+
+    width: fit-content;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  @media print {
+    .invoice-container {
+      page-break-before: always;
+    }
+  }
+  .payment-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 20%;
+    margin-top: 10px;
+    font-family: 'Poppins', sans-serif; /* Added font family */
+  }
+  
+  .list-header {
+    background-color: #126262;
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    padding: 2px 10px; /* Adjusted padding */
+    font-weight: bold;
+    /* width: 20%; */
+  }
+  
+  .tag {
+    display: flex;
+    justify-content: space-between;
+    padding: 2px 10px; /* Adjusted padding */
+    border-bottom: 1px solid #ccc;
+    /* height: 20px; Fixed height */
+  }
+  
+  .tag:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .tag:hover {
+    background-color: #eaeaea;
+  }
+  
+  .tag span {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px; /* Added font family */
+  }
+  

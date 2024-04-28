@@ -1,0 +1,123 @@
+/* manage-customer.css */
+
+.manage-customer {
+    padding: 20px 8px;
+    width: 100%;
+  }
+  
+  .manage-customer-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .manage-customer-heading h5 {
+    font-size: 24px;
+    color: #333; 
+  }
+  
+  .manage-customer-heading input {
+    width: 250px;
+    height: 30px;
+    padding: 0 10px;
+    border: 1px solid lightgray;
+    outline: #007bff;
+    border-radius: 5px;
+  }
+  
+  .manage-customer-heading button {
+    padding: 10px 25px;
+    background-color: #007bff;
+    color: #fff; 
+   width: fit-content;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .manage-customer-table table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .manage-customer th, .manage-customer td {
+  
+    text-align: center;
+    padding: 4px 0;
+   
+  }
+  .profile-image-container {
+width: 60px;
+   
+  }
+
+ .manage-customer th:first-child,
+ .manage-customer td:first-child{
+    border-left: none;
+  }
+ .manage-customer tbody tr:nth-child(2n){
+    background-color: #45be8a49;
+
+  }
+ .manage-customer tbody tr:nth-child(2n-1) {
+    background-color: #1ac27c75;
+
+  }
+ 
+ .manage-customer th {
+    background-color: #347AB8;
+    color: white; /* Adjust the background color as needed */
+  }
+  
+ .profile-image{
+ width: 50px;
+  border-radius: 50%; 
+  overflow: hidden;
+  text-align: center;
+ }
+  
+  .manage-customer-table img {
+   width: 100%;
+    object-fit: contain;
+  /* Make the image circular */
+  }
+   .manage-customer-table td svg{
+        font-size: 25px;
+        margin-left: 10px;
+  }
+ .manage-customer-table td svg:first-child{
+    color: #007bff;
+  }
+ .manage-customer-table td svg:last-child{
+    color: rgba(255, 0, 0, 0.641);
+  }
+ 
+  
+  .manage-customer-pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .manage-customer-pagination ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .manage-customer-pagination li {
+    padding: 10px;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .manage-customer-pagination li:hover {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .manage-customer-heading svg{
+    font-size: 30px;
+  }

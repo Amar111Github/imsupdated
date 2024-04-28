@@ -1,0 +1,104 @@
+/* suplierForm.css */
+
+.suplierform-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+  }
+  
+  .suplierform {
+    background: #fff;
+    width: 400px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .suplierform-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    /* background-color: #0f606036 !important; */
+  }
+  
+  .suplierform-heading h4 {
+    font-size: 20px;
+    color: #333;
+    font-family: poppins;
+    font-weight: 600; /* Adjust the color as needed */
+  }
+  
+  .suplierform-closing {
+    cursor: pointer;
+    font-size: 30px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: 0.5s;
+    color: red;
+  }
+  .suplierform-closing:hover{
+    background-color: #0f606046;
+  }
+  
+  .suplierform-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd; /* Adjust the border color as needed */
+    border-radius: 5px;
+    outline: none;
+ 
+  }
+  .suplierform-form input:focus{
+    border: 1px solid #0F6060;
+  }
+  
+  .suplierform-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #0F6060; /* Adjust the background color as needed */
+    color: #fff; /* Adjust the text color as needed */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+ 
+
+/* Add these styles to your existing CSS file */
+
+.suplierform-form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd; /* Adjust the border color as needed */
+  border-radius: 5px;
+  outline: none;
+}
+
+.suplierform-form select:focus {
+  border: 1px solid #0F6060;
+}
+
+/* Style for option elements */
+.suplierform-form select option {
+  background-color: #fff; /* Background color for options */
+  color: #333; /* Text color for options */
+}
+
+.suplierform-form label {
+  font-family: poppins;
+  margin-bottom: 5px;
+}
