@@ -15,7 +15,7 @@ const Header = () => {
       <div className="navbar-container">
     <div className='navbar'>
      <div className='logo'>
-       <img src={logo} alt='kasper'/>
+       <h1>Ambey Fashion</h1>
      </div>
      <div className="profile-icon" onClick={()=>setProfileToggle(!profileToggle)}>
        <img src={profile} alt="profile"/>

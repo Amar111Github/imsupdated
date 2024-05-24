@@ -32,6 +32,8 @@ const Approvepurchase = () => {
             setViewData(response.data.result[0].arr.filter((val)=>{
                 return(val.status==="Pending")
             }));
+
+
         } catch (error) {
             console.log(error);
         }

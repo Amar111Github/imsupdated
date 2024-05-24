@@ -151,7 +151,7 @@ useEffect(()=>{
 
   const productDetailsHandler = async () => {
     try {
-      const response = await axios.post(`http://localhost:8000/invoice/invoicesDetails`, data);
+      const response = await axios.post(`/invoice/invoicesDetails`, data);
       setProduct(response.data.product);
       setProductDetails(response.data.result);
     } catch (error) {
@@ -161,7 +161,7 @@ useEffect(()=>{
 
   const allTax = async () => {
     try {
-      const response = await axios.get(`http://localhost:8000/tax/find_tax`);
+      const response = await axios.get(`/tax/find_tax`);
       setTax(response.data.product);
     } catch (error) {
       console.log(error);
@@ -171,7 +171,7 @@ useEffect(()=>{
 
   const allClient = async () => {
     try {
-      const response = await axios.get(`http://localhost:8000/client/allCustomer`);
+      const response = await axios.get(`/client/allCustomer`);
    let customerDetails = response.data.result.map((val)=>{
         return val.customer_email;
       })
@@ -683,7 +683,7 @@ const batchUnits = async (e)=>{
 
 const allUnits = async () => {
   try {
-      const response = await axios.get(`http://localhost:8000/noOfUnit/noOfUnit`);
+      const response = await axios.get(`/noOfUnit/noOfUnit`);
       console.log(response.data.data)
       // localStorage.setItem('purchaseObject', JSON.stringify(arr));
       setPurchase(response.data.data)

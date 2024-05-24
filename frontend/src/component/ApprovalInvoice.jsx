@@ -15,6 +15,7 @@ const ApprovalInvoice = () => {
     const location = useLocation().pathname;
     const [data, setData] = useState(null);
     const [veiwData, setViewData] = useState(data);
+
     const [units, setUnits] = useState(null);
     const [current, setCurrent] = useState(1)
     const [searchKeyWord, setSearchKeyWord] = useState("");
@@ -57,7 +58,7 @@ const ApprovalInvoice = () => {
         try {
             const response = await axios.get("/noOfUnit/noOfUnit");
             
-      
+            
             const transformedObject = getTotalQuantities(response.data.data);
             console.log(transformedObject);
             setUnits(transformedObject);

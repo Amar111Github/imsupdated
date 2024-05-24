@@ -22,7 +22,6 @@ const Hsn = ({ setFormToggle,allHsn, editData, setEditData}) => {
         if(editData){
             try {
          
-              
                 const response = await axios.patch(`/hsn/update_hsn/${editData._id}`, data);
                 console.log(response);
                 setFormToggle(false);
